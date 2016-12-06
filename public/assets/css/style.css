@@ -1,26 +1,747 @@
-html, body {
-	font-family: Consolas, monaco, monospace;
-	background-color: #272822;
-	color: #F8F8F2;
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
+@import url('http://weloveiconfonts.com/api/?family=entypo');
+
+/******************************
+
+
+ 	Css Global -- Resset
+
+
+ ********************************** */
+
+* {
+	margin:0;
+	padding:0;
 }
 
-.container {
-	margin: 50px;
+
+body {
+
+	background: #222;
+	font-family: 'Oxygen', 'sans-serif';
+	font-size: 1.0em;
+	color:#555;
 }
 
-a {
+
+
+
+
+
+
+/******************************
+
+
+ 	Layout "Ne pas toucher " 
+
+ 	- partie de gauche
+
+
+ ********************************** */
+
+
+/** header **/
+
+aside img {
+    max-width: 100%;
+    width: 75%;
+    padding: 0 1.5rem;
+}
+
+aside #imgW{
+    width: 75%;
+    margin: auto;
+}
+
+/* Menu de navigation */
+
+aside nav a {
+	color:#B80000;
+    text-transform: uppercase;
+}
+
+
+aside nav a:hover {
+	color:#000;
+}
+
+aside nav a:focus {
+	outline:none;
+}
+
+
+aside nav ul{
+	margin:0 0 35px 35px;
+}
+
+header .fa-bars{
+    display: none;
+}
+
+
+/* li menu (design) */
+
+.active{
+	background-color: red;
+	color: white;
+	text-align: center;
+}
+
+aside {
+    width: 16%;
+    position: fixed;
+    height: 100%;
+}
+
+aside nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+aside nav li {
+	border-bottom: 1px solid #333;
+}
+
+
+aside nav li a:hover {
+	background:#292929;
+	color: #eee;
+	text-decoration:none;
+}
+
+
+aside nav li a {
+	color: #ccc;
+	display: block;
+	padding: 22px 17px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
 	text-decoration: none;
-	color: #A6E22E;
+	letter-spacing: 0.5px;
 }
 
-a:hover {
-	color: #F92672;
+
+
+#btnSc {
+    position: absolute;
+    bottom: 7rem;
+    left: 1rem;
+}
+
+/* Bouton Reseaux scociaux css */
+
+.btnRs{
+	    position: absolute;
+	    bottom: 4.5rem;
+	    left: 20%;
+	}
+
+.btnRs a {
+    color: #fefdfa;
+}
+
+.btnRs a:hover {
+
+    color: red;
+}
+
+
+
+.btnRs a .fa {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+
+
+/******************************
+
+
+ 	Vue layout - partie de droite
+
+
+ ********************************** */
+
+
+ main {
+     margin-left: 16%;
+     background-color: #fff;
+     text-align: center;
+ }
+
+
+/* header - Titre */
+
+header {
+    background: url(../img/musiciens1.jpg) no-repeat;
+    background-size: cover;
+    height: 30rem;
+    margin-left: 16%;
+    position: relative;
+}
+
+#titre {
+    width: 30rem;
+    background-color: rgba(157, 157, 171, 0.59);
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    text-align: center;
 }
 
 h1 {
-	color: #F92672;
+    font-size: 3rem;
+    color: black;
 }
 
 h2 {
-	color: #66D9EF;
+    font-size: 2rem;
+    color: black;
+    padding: .5rem;
 }
+
+
+/* header - bouton connexion */
+
+#connexion{
+
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+
+
+#connexion a {
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #afb7c7;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+}
+
+#connexion a:hover {
+  background: #696f73;
+  text-decoration: none;
+}
+
+
+
+/* Section - 1 */
+
+section:first-child {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2rem 0.5rem;
+}
+
+.imgSec1 img {
+    display: inline-block;
+    width: 31.7%;
+    height: 30%;
+    margin-bottom: 1rem;
+}
+
+.desc {
+    display: inline-block;
+    vertical-align: top;
+    width: 10rem;
+}
+
+/* Section - 2 */
+
+
+section:nth-child(2) {
+    display: inline-block;
+    background-color: rgb(106, 104, 104);
+    padding-bottom: 1rem;
+}
+
+section:nth-child(2) .imgSec2 img{
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+}
+
+
+
+.btn {
+    -webkit-border-radius: 11;
+    -moz-border-radius: 11;
+    border-radius: 11px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #a6a6a6;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: block;
+    width: 20%;
+    margin: auto;
+}
+
+.btn:hover {
+  background: #767778;
+  text-decoration: none;
+}
+
+/* Section 3 */
+
+section:nth-child(3) {
+    display: inline-block;
+}
+
+
+section:nth-child(3) img {
+    width: 35%;
+    height: 35%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 2rem;
+    margin-left: 16%;
+    color: white;
+    text-align: center;
+    background-color: rgb(106, 104, 104);
+}
+
+
+@media screen and (max-width: 1100px)
+{
+
+    /* barre de navigation  */
+
+     aside{
+        
+    }
+
+
+    .btnRs {
+        position: absolute;
+        left: 20%;
+    }
+
+
+    .btnRs a .fa {
+       font-size: 2rem;
+       margin: 0;
+    }
+
+    /* Section - 1 */
+
+    section:first-child {
+        display: inline-block;
+        vertical-align: top;
+        padding: 2rem 0;
+    }
+
+    .imgSec1 img {
+        display: inline-block;
+        width: 25%;
+        height: 30%;
+        margin-bottom: 1rem;
+    }
+
+    .desc {
+        display: inline-block;
+        vertical-align: top;
+        width: 10rem;
+    }
+    /* Section - 2*/
+
+    .btn {
+        -webkit-border-radius: 11;
+        -moz-border-radius: 11;
+        border-radius: 11px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 16px;
+        background: #a6a6a6;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+
+
+}
+
+@media screen and (max-width: 980px)
+{
+
+    /* barre de navigation  */
+
+     aside{
+        
+    }
+
+
+    .btnRs {
+        position: absolute;
+        left: 20%;
+    }
+
+
+    .btnRs a .fa {
+       font-size: 2rem;
+       margin: 0;
+    }
+
+    /* Section - 1 */
+
+    section:first-child {
+        display: inline-block;
+        vertical-align: top;
+        padding: 2rem 0;
+    }
+
+    .imgSec1 img {
+        display: inline-block;
+        width: 25%;
+        height: 30%;
+        margin-bottom: 1rem;
+    }
+
+    .desc {
+        display: inline-block;
+        vertical-align: top;
+        width: 10rem;
+    }
+    /* Section - 2*/
+
+    .btn {
+        -webkit-border-radius: 11;
+        -moz-border-radius: 11;
+        border-radius: 11px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 16px;
+        background: #a6a6a6;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 850px)
+{
+ 
+    /* Global */
+
+    header, main{
+
+        margin: 0;
+    }
+
+    /* partie de gauche  - menu*/
+
+
+    /*Header*/
+
+    header .bars .fa-bars{
+
+        display: block;
+    }
+
+    header .fa {
+
+        display: inline-block;
+        font-size: 2rem;
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        color: #ff2323;
+    }
+
+    /*Aside*/
+
+    aside{
+
+        display: none;
+    } 
+
+
+    /* Bouton de connexion */
+    #connexion{
+        display: none;
+    }
+
+
+    /* partie de droite  - vue*/
+
+    /* Header */
+    #titre {
+        position: absolute;
+        top: 35%;
+        left: 23%;
+    }
+
+    /* Section */
+
+    /* Section - 1 */
+    section:first-child {
+        display: inline-block;
+        vertical-align: top;
+        padding: 2rem 0;
+    }
+
+    .imgSec1 img {
+        display: inline-block;
+        width: 27%;
+        height: 30%;
+        margin-bottom: 1rem;
+    }
+
+    .desc {
+        display: inline-block;
+        vertical-align: top;
+        width: 10rem;
+    }
+
+    /* Section - 2*/
+
+    .btn {
+        -webkit-border-radius: 11;
+        -moz-border-radius: 11;
+        border-radius: 11px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 16px;
+        background: #a6a6a6;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+    footer {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 740px)
+{
+    /* Header */
+    #titre {
+        width: 30rem;
+        position: absolute;
+        top: 35%;
+        left: 18%;
+    }
+
+    /* Section */
+
+    /* Section - 1 */
+
+    section:first-child {
+         display: block; 
+    }
+
+    section:first-child img {
+
+         display: block; 
+         width: 100%;
+         
+    }
+
+    section:first-child p {
+        
+         display: block; 
+         margin: 1rem auto;
+    }
+
+    /* Section - 2*/
+
+    .btn {
+        -webkit-border-radius: 11;
+        -moz-border-radius: 11;
+        border-radius: 11px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 16px;
+        background: #a6a6a6;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 580px)
+{
+ 
+     /* Header */
+     #titre {
+        width: 17rem;
+        position: absolute;
+        top: 33%;
+        left: 26%;
+        margin: auto;
+     }
+
+      /*Titre - header*/
+      header h1 {
+          padding: .5rem 0;
+          font-size: 2rem;
+      }
+
+     header h2{
+          font-size: 1.5rem;
+      }
+
+      /* Section */
+
+      /* Section - 1 */
+
+      section:first-child {
+           display: block; 
+      }
+
+      section:first-child img {
+
+           display: block; 
+           width: 100%;
+           
+      }
+
+      section:first-child p {
+          
+           display: block; 
+           margin: 1rem auto;
+      }
+
+
+      /*Section - 2*/
+      
+      section:nth-child(2) .imgSec2{
+          display: block;
+      }
+
+
+      section:nth-child(2) .imgSec2 img{
+          display: block;
+          width: 100%;
+          margin-bottom: 1rem;
+      }
+
+
+      .btn {
+          -webkit-border-radius: 11;
+          -moz-border-radius: 11;
+          border-radius: 11px;
+          font-family: Arial;
+          color: #ffffff;
+          font-size: 16px;
+          background: #a6a6a6;
+          padding: 10px 20px 10px 20px;
+          text-decoration: none;
+          display: block;
+          width: 50%;
+          margin: auto;
+      }
+
+
+
+
+}
+
+@media screen and (max-width: 420px)
+{
+
+    /* Header */
+    #titre {
+        width: 13rem;
+        height: 6rem;
+        position: absolute;
+        top: 35%;
+        left: 18%;
+    }
+
+    /*Titre - header*/
+    header h1 {
+
+        padding: .5rem 0;
+        font-size: 1.4rem;
+    }
+
+   header h2{
+
+        font-size: 1.3rem;
+    }
+
+
+    /* Section */
+
+    /* Section - 1 */
+
+    section:first-child {
+         display: block; 
+    }
+
+    section:first-child img {
+
+         display: block; 
+         width: 100%;
+         
+    }
+
+    section:first-child p {
+        
+         display: block; 
+         margin: 1rem auto;
+    }
+
+
+    /*Section - 2*/
+    
+    section:nth-child(2) .imgSec2{
+        display: block;
+    }
+
+
+    section:nth-child(2) .imgSec2 img{
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+
+    .btn {
+        -webkit-border-radius: 11;
+        -moz-border-radius: 11;
+        border-radius: 11px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 16px;
+        background: #a6a6a6;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+
+}
+
