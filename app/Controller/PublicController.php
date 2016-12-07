@@ -83,9 +83,9 @@ class PublicController extends BaseController
 		$role = $authent['role'];
 
 		if( ($idPageArtiste == $idArtiste) || ($role == 'admin')){
-			$this->show('artiste/edit/' . $page);
+			$this->show('artistes/edit/' . $page);
 		} else {
-			$this->redirectToRoute('default_home');;
+			$this->redirectToRoute('default_home');
 		}
 	}
 
