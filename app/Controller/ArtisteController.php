@@ -9,12 +9,28 @@ use W\Security\AuthentificationModel;
 class ArtisteController extends PublicController
 {
 
-	public function qrCode($idPageArtiste) {
-		$this->editionAccess($idPageArtiste, "qrcode");
+	public function profil($idPageArtiste) {
+		$this->editionAccess($idPageArtiste, "profil");
 	}
 
 	public function galerie($idPageArtiste) {
 		$this->editionAccess($idPageArtiste, "galerie");
+	}
+
+	public function videos($idPageArtiste) {
+		$this->editionAccess($idPageArtiste, "videos");
+	}
+
+	public function audio($idPageArtiste) {
+		$this->editionAccess($idPageArtiste, "audio");
+	}
+
+	public function evenements($idPageArtiste) {
+		$this->editionAccess($idPageArtiste, "evenements");
+	}
+
+	public function qrcode($idPageArtiste) {
+		$this->editionAccess($idPageArtiste, "qrcode");
 	}
 
 }

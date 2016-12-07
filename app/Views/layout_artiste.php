@@ -79,12 +79,18 @@
 		<?php endif; ?>
 
 		<!-- Menu d'édition des pages artiste -->
+		<?php
 
+		?>
 		<div class="menu-edition">
 			<ul>
-				<li><a href="#">Votre profil</a></li>
-				<li><a href="<?php echo $this->url('qrcode', array('id' => $w_user['id'])); ?>">Votre QRCode</a></li>
-				<li><a href="<?php echo $this->url('galerie', array('id' => $w_user['id'])); ?>">Votre Galerie</a></li>
+				<li><a href="<?php echo $this->url('profil', array('id' => $w_user['id_artiste'])); ?>">Votre profil</a></li>
+				<li><a href="<?php echo $this->url('profil', array('id' => $w_user['id_artiste'])); ?>">Votre profil</a></li>
+				<li><a href="<?php echo $this->url('galerie', array('id' => $w_user['id_artiste'])); ?>">Votre galerie</a></li>
+				<li><a href="<?php echo $this->url('videos', array('id' => $w_user['id_artiste'])); ?>">Vos videos</a></li>
+				<li><a href="<?php echo $this->url('audio', array('id' => $w_user['id_artiste'])); ?>">Vos fichiers audio</a></li>
+				<li><a href="<?php echo $this->url('evenements', array('id' => $w_user['id_artiste'])); ?>">Vos évènements</a></li>
+				<li><a href="<?php echo $this->url('qrcode', array('id' => $w_user['id_artiste'])); ?>">Votre QRCode</a></li>
 			</ul>
 		</div>
 

@@ -72,20 +72,22 @@ class PublicController extends BaseController
 		$this->redirectToRoute('login');
 	}
 
-
-
+	public $data;
 	// function pour limiter l'accès aux pages d'édition des artistes
 	public function editionAccess($idPageArtiste, $page)
 	{
 		$authent = $this->getUser();
 
+		var_dump($idPageArtiste);
+
 		$idArtiste = $authent['id_artiste'];
 		$role = $authent['role'];
 
 		if( ($idPageArtiste == $idArtiste) || ($role == 'admin')){
-			$this->show('artistes/edit/' . $page);
+			$this->show( ('artistes/edit/' . $page), ($data = array($idPageArtiste)) );
+			var_dump($data);
 		} else {
-			$this->redirectToRoute('default_home');
+			$this->redirectToRoute('login');
 		}
 	}
 
