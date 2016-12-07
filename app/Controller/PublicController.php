@@ -39,8 +39,6 @@ class PublicController extends BaseController
 				// vérification de l'existence de l'utilisateur
 				$idUser = $auth->isValidLoginInfo($_POST['email'], $_POST['password']);
 
-				var_dump($idUser);
-
 				// si l'utilisateur existe bel et bien...
 				if($idUser !== 0){
 					$publicModel = new PublicModel();
@@ -49,6 +47,8 @@ class PublicController extends BaseController
 					// sers pour le connecter au site à l'aide de $auth->logUserIn
 					$userInfos = $publicModel->find($idUser);
 					$auth->logUserIn($userInfos);
+
+					var_dump($userInfos);
 
 					// une fois l'utilisateur connecté, je le redirige vers l'accueil
 					$this->getFlashMessenger()->success('Vous vous êtes connecté avec succès !');
@@ -64,6 +64,29 @@ class PublicController extends BaseController
 		}
 
 		$this->show('users/login', array('datas' => isset($_POST) ? $_POST : array()));
+	}
+
+	public function logout() {
+		$auth = new AuthentificationModel();
+		$auth->logUserOut();
+		$this->redirectToRoute('login');
+	}
+
+
+
+	// function pour limiter l'accès aux pages d'édition des artistes 
+	public function editionAccess($idPageArtiste)
+	{
+		$authent = $this->getUser();
+
+		$idArtiste = $authent['id_artiste'];
+		$role = $authent['role'];
+
+		if( ($idPageArtiste == $idArtiste) || ($role == 'admin')){
+			$this->show('artiste/edit/qrcode');
+		} else {
+			$this->redirectToRoute('default_home');;
+		}
 	}
 
 }

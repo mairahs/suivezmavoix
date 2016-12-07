@@ -3,19 +3,17 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use W\Security\AuthentificationModel;
+// use \W\Security\AuthorizationModel as A;
 
-class ArtisteController extends BaseController
+class ArtisteController extends PublicController
 {
 
-	/**
-	 * Page d'accueil par défaut
-	 */
-	public function addQrcode($idArtiste)
-	{
-		var_dump($idArtiste);
+	public function qrCode($idPageArtiste) {
+		$this->editionAccess($idPageArtiste);
 
-		
-		$this->show('artiste/edit/qrcode');
 	}
+
+
 
 }

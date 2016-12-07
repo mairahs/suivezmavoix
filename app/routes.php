@@ -3,5 +3,6 @@
 	$w_routes = array(
 		['GET', '/', 'Default#home', 'default_home'],
 		['GET|POST', '/users/login', 'Public#login', 'login'],
-		['GET|POST', '/artiste/[i:idArtiste]/edit/qrcode', 'Artiste#addQrcode', 'artiste_qrcode'],
+		['GET', '/logout', 'Public#logout', 'logout'],
+		['GET|POST', '/artiste/[i:id]/edit/qrcode', 'Artiste#qrCode', 'artiste_qrcode'],
 	);

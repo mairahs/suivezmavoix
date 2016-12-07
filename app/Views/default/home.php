@@ -2,6 +2,7 @@
 
 
 <?php $this->start('main_content') ?>
-	<main>
-	</main>
+
+		<h2>Test home</h2>
+
 <?php $this->stop('main_content') ?>

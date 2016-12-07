@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Qrcode']) ?>
+<?php $this->layout('layout_artiste', ['title' => 'Qrcode']) ?>
 
 <?php $this->start('main_content') ?>
 	<h2>Voici votre Qrcode</h2>
