@@ -2,8 +2,10 @@
 
 Choses a faire :
 
-	- layout principale --> (Inscription et connexion fenêtre modale) 
-	- definir route, controller, models
-	- vue ( template) --> voir la maquette
 	- Page de gestion des commentaires
 	- Page de supression des commentaires 
+
+	- Menu en bar 
+
+	-menu modal : inscription --> lien vers artistes 
+							  --> lien vers utilisateurs

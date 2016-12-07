@@ -12,14 +12,7 @@
  ********************************** -->
 
  		
-	<!-- Contenu des vues  -->
-
-
-
-	<main>
- 			<!-- Section haut de page (Image plus titre) -->
-
-
+	
  		<!-- Artiste Image plus description   -->
  		<section>
 
@@ -54,21 +47,21 @@
 
  					<h2>Les artistes </h2>
 
- 					<div class="imgSec2">
+ 				<div class="imgSec2">
 
- 						<img src="<?= $this->assetUrl('img/default.jpg') ?>" alt=""  title="image Artistes" >	 		
 
- 						<img src="<?= $this->assetUrl('img/default.jpg') ?>" alt=""  title="image Artistes" >	 		
+ 				<?php foreach ($vue_artisteAcceuil as $vueArt) :?>
+ 						
+ 					<div class="img_artist">
+ 						<img src="<?= $this->assetUrl('img/'.$vueArt['illustration']); ?>" alt=""  title="image Artistes" >
+						<p><?= $this->e($vueArt['nom_artiste']); ?></p>
+  					</div>	
 
- 						<img src="<?= $this->assetUrl('img/default.jpg') ?>" alt=""  title="image Artistes" > 		
+ 				
+ 				<?php endforeach; ?>
 
- 						<img src="<?= $this->assetUrl('img/default.jpg') ?>" alt=""  title="image Artistes" >
-
- 						<img src="<?= $this->assetUrl('img/default.jpg') ?>" alt=""  title="image Artistes" >
-
- 						<img src="<?= $this->assetUrl('img/default.jpg') ?>" alt=""  title="image Artistes" >
+				</div>
  		
-					</div>
 
 					<a href="" class="btn">Découvrir les artistes</a>
 
@@ -80,22 +73,22 @@
 
  				<div class="imgSec3">
 
- 				<img src="<?= $this->assetUrl('img/default_map.jpg') ?>">
+	 				<?php foreach ($vue_evenementAcceuil as $vueEv) :?>
+	 						
+	 					<div class="img_artist">
+	 						<p><?= $this->e($vueEv['date_evenement']); ?></p>
+	 						<p><?= $this->e($vueEv['titre_evenement']); ?></p>
+	 						<p><?= $this->e($vueEv['description_evenement']); ?></p>
+	 						<p><?= $this->e($vueEv['adresse']); ?></p>
+	 						<p><?= $this->e($vueEv['id_artiste']); ?></p>
+	  					</div>	
 
-
- 				<img src="<?= $this->assetUrl('img/default_map.jpg') ?>" alt=""  title="image Artistes" >
-
- 				<img src="<?= $this->assetUrl('img/default_map.jpg') ?>" alt=""  title="image Artistes" >
-
- 				<img src="<?= $this->assetUrl('img/default_map.jpg') ?>" alt=""  title="image Artistes" >
+	 				
+	 				<?php endforeach; ?>
  					
  				</div>
 
  		</section>
-
-	</main>
-
-
 
 	<!-- *****************************
 
@@ -107,3 +100,5 @@
 
 
 <?php $this->stop('main_content') ?>
+
+

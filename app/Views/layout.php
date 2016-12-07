@@ -18,6 +18,35 @@
 
 	 ********************************** -->
 
+	 	<!-- Contenu des vues  -->
+
+
+	 	<!-- Fenetre modale -->
+
+	 		<!-- The Modal -->
+	 		<div id="myModal1" class="modal">
+
+	 		  <!-- Modal content -->
+	 		  <div class="modal-content">
+	 		    <span class="close" onclick="closeModal()">x</span>
+	 		    <p>Connexion..</p>
+	 		    <p><a href="" onclick="closeModal()">lien connection</a></p>
+	 		  </div>
+
+	 		</div>
+
+	 		<div id="myModal2" class="modal">
+
+	 		  <!-- Modal content -->
+	 		  <div class="modal-content">
+	 		    <span class="close" onclick="closeModal()">x</span>
+	 		    <p>Inscription..</p>
+	 		    <p><a href=""></a>>lien inscription </a></p>
+	 		  </div>
+
+	 		</div>
+
+
 		<aside>
 
 			<div id="imgW">
@@ -60,11 +89,18 @@
 
 			<span id="connexion">
 
-				<!-- <a href="<?php echo $this->url('login'); ?>">Connexion</a> -->
+			<button class="btnOpenModal" onclick="openModal1()">
+				Connexion				
+			</button>
 
-				<a href="inscription.php">Inscription</a>
+			<button class="btnOpenModal"  onclick="openModal2()">
+				Inscription
+			</button>
+			
 
 			</span>
+
+
 
 		</header>
 
@@ -77,7 +113,12 @@
 
 		 ********************************** -->
 
+		 <main>
+		 
 		<?= $this->section('main_content') ?>
+		 	
+		 	
+		 </main>
 
 
 
@@ -96,5 +137,6 @@
 
 		<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="<?php echo $this->assetUrl('js/flashmessage.js') ?>"></script>
+		<script type="text/javascript" src="<?php echo $this->assetUrl('js/boutonModal.js') ?>"></script>
 	</body>
 	</html>

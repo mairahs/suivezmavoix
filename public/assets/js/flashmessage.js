@@ -7,4 +7,6 @@ $(document).ready(function(){
         //'.'+dataDismiss devient '.alert'
         $(this).closest('.'+dataDismiss).remove();
     });
+
+
 });
