@@ -32,7 +32,11 @@
         "league/url": "^3.3",
         "phpmailer/phpmailer": "^5.2",
         "plasticbrain/php-flash-messages": "^1.0",
+<<<<<<< HEAD
         "respect/validation": "^1.1",
+=======
+        "respect/validation": "^1.1"
+>>>>>>> master
     },
     "autoload": {
         "psr-4": {
