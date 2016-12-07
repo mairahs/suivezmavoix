@@ -77,6 +77,18 @@
 		<?php if($fmsg): ?>
 		<?php echo "<p>" . $fmsg->display() . "</p>"; ?>
 		<?php endif; ?>
+
+		<!-- Menu d'édition des pages artiste -->
+
+		<div class="menu-edition">
+			<ul>
+				<li><a href="#">Votre profil</a></li>
+				<li><a href="<?php echo $this->url('qrcode', array('id' => $w_user['id'])); ?>">Votre QRCode</a></li>
+				<li><a href="<?php echo $this->url('galerie', array('id' => $w_user['id'])); ?>">Votre Galerie</a></li>
+			</ul>
+		</div>
+
+
 		<!-- *****************************
 
 

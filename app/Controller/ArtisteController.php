@@ -10,10 +10,11 @@ class ArtisteController extends PublicController
 {
 
 	public function qrCode($idPageArtiste) {
-		$this->editionAccess($idPageArtiste);
-
+		$this->editionAccess($idPageArtiste, "qrcode");
 	}
 
-
+	public function galerie($idPageArtiste) {
+		$this->editionAccess($idPageArtiste, "galerie");
+	}
 
 }
